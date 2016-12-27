@@ -1,11 +1,11 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>org.fenixedu</groupId>
         <artifactId>fenix-framework-project</artifactId>
-        <version>2.2.0</version>
+        <version>2.3.0</version>
+        <relativePath/>
     </parent>
 
     <groupId>pt.ist</groupId>
@@ -20,11 +20,20 @@
     <properties>
         <version.org.mathjax.mathjax>2.3</version.org.mathjax.mathjax>
         <version.org.fenixedu.fenixedu-academic>5.5.1</version.org.fenixedu.fenixedu-academic>
+        <version.org.fenixedu.bennu>3.4.0</version.org.fenixedu.bennu>
+        <version.org.fenixedu.bennu-renderers>5.0.0</version.org.fenixedu.bennu-renderers>
+        <version.com.google.guava.guava>17.0</version.com.google.guava.guava>
+        <version.joda.time.joda.time>2.3</version.joda.time.joda.time>
+        <version.javax.faces.jsf-impl>1.1</version.javax.faces.jsf-impl>
+        <version.javax.faces.jsf-api>1.1_01</version.javax.faces.jsf-api>
+        <version.commons-beanutils.commons-beanutils>1.9.2</version.commons-beanutils.commons-beanutils>
+        <version.commons-collections.commons-collections>3.2.1</version.commons-collections.commons-collections>
+        <version.commons-lang.commons-lang>2.6</version.commons-lang.commons-lang>
     </properties>
 
     <issueManagement>
-        <system>GitHub</system>
-        <url>https://github.com/ist-dsi/fenixedu-ist-onlinetests/issues/</url>
+        <system>JIRA</system>
+        <url>https://jira.fenixedu.org/browse/FIOT</url>
     </issueManagement>
 
     <licenses>
@@ -57,6 +66,46 @@
             <groupId>org.mathjax</groupId>
             <artifactId>mathjax</artifactId>
             <version>${version.org.mathjax.mathjax}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.fenixedu</groupId>
+            <artifactId>bennu-core</artifactId>
+            <version>${version.org.fenixedu.bennu}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.fenixedu</groupId>
+            <artifactId>bennu-renderers</artifactId>
+            <version>${version.org.fenixedu.bennu-renderers}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.fenixedu</groupId>
+            <artifactId>bennu-struts</artifactId>
+            <version>${version.org.fenixedu.bennu-renderers}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${version.com.google.guava.guava}</version>
+        </dependency>
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>${version.joda.time.joda.time}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>${version.commons-beanutils.commons-beanutils}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>${version.commons-collections.commons-collections}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>${version.commons-lang.commons-lang}</version>
         </dependency>
     </dependencies>
 
