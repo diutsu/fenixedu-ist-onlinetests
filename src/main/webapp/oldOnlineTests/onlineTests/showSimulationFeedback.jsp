@@ -55,12 +55,12 @@
 		<logic:iterate id="testQuestion" name="infoStudentTestQuestionList" type="org.fenixedu.academic.dto.onlineTests.InfoStudentTestQuestion"/>
 		<bean:define id="distributedTest" name="testQuestion" property="distributedTest" type="org.fenixedu.academic.dto.onlineTests.InfoDistributedTest"/>
 		<bean:define id="distributedTestCode" name="distributedTest" property="externalId"/>
-		<html:hidden bundle="HTMLALT_RESOURCES" altKey="hidden.testInformation" property="testInformation" name="distributedTest" property="testInformation"/>
+		<html:hidden bundle="HTMLALT_RESOURCES" altKey="hidden.testInformation" name="distributedTest" property="testInformation"/>
 		<bean:define id="testType" name="distributedTest" property="testType.type"/>
 		<html:hidden bundle="HTMLALT_RESOURCES" altKey="hidden.testType" property="testType" value="<%=testType.toString()%>"/>
 		<bean:define id="availableCorrection" name="distributedTest" property="correctionAvailability.availability"/>
 		<html:hidden bundle="HTMLALT_RESOURCES" altKey="hidden.availableCorrection" property="availableCorrection" value="<%=availableCorrection.toString()%>"/>
-		<html:hidden bundle="HTMLALT_RESOURCES" altKey="hidden.imsFeedback" property="imsFeedback" name="distributedTest" property="imsFeedback"/>
+		<html:hidden bundle="HTMLALT_RESOURCES" altKey="hidden.imsFeedback" name="distributedTest" property="imsFeedback"/>
 		<html:hidden bundle="HTMLALT_RESOURCES" altKey="hidden.distributedTestCode" property="distributedTestCode" value="<%=distributedTestCode.toString()%>"/>
 		<center>
 		<h2><bean:write name="distributedTest" property="title"/></h2>
@@ -88,10 +88,10 @@
 				<html:hidden alt='<%="optionShuffle"+questionIndex%>' property='<%="optionShuffle"+questionIndex%>' value="<%= optionShuffle.toString() %>"/>
 			<% } %>
 			
-			<logic:notEmpty name="question" name="testQuestion" property="response">
+			<logic:notEmpty name="testQuestion" property="response">
 				<bean:define id="questionValue" value='<%="question"+ questionIndex%>'/>
 				<%if(((Integer)questionType).intValue()==1 ){ %>
-					<logic:notEmpty name="question" name="testQuestion" property="response.response">
+					<logic:notEmpty name="testQuestion" property="response.response">
 						<logic:iterate id="r" name="testQuestion" property="response.response">
 							<html:hidden alt="<%=questionValue%>" property="<%=questionValue%>" value="<%= r.toString() %>"/>
 						</logic:iterate>
@@ -106,12 +106,12 @@
 		</logic:iterate>
 		<bean:define id="distributedTest" name="testQuestion" property="distributedTest" type="org.fenixedu.academic.dto.onlineTests.InfoDistributedTest"/>
 		<bean:define id="distributedTestCode" name="distributedTest" property="externalId"/>
-		<html:hidden bundle="HTMLALT_RESOURCES" altKey="hidden.testInformation" property="testInformation" name="distributedTest" property="testInformation"/>
+		<html:hidden bundle="HTMLALT_RESOURCES" altKey="hidden.testInformation" name="distributedTest" property="testInformation"/>
 		<bean:define id="testType" name="distributedTest" property="testType.type"/>
 		<html:hidden bundle="HTMLALT_RESOURCES" altKey="hidden.testType" property="testType" value="<%=testType.toString()%>"/>
 		<bean:define id="availableCorrection" name="distributedTest" property="correctionAvailability.availability"/>
 		<html:hidden bundle="HTMLALT_RESOURCES" altKey="hidden.availableCorrection" property="availableCorrection" value="<%=availableCorrection.toString()%>"/>
-		<html:hidden bundle="HTMLALT_RESOURCES" altKey="hidden.imsFeedback" property="imsFeedback" name="distributedTest" property="imsFeedback"/>
+		<html:hidden bundle="HTMLALT_RESOURCES" altKey="hidden.imsFeedback" name="distributedTest" property="imsFeedback"/>
 		
 	</logic:notPresent>
 	<br/>

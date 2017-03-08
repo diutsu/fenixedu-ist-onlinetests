@@ -66,12 +66,12 @@
 	<bean:define id="objectCode" name="distributedTest" property="infoTestScope.infoObject.externalId"/>
 	<html:hidden bundle="HTMLALT_RESOURCES" altKey="hidden.objectCode" property="objectCode" value="<%= objectCode.toString() %>"/>
 	<html:hidden bundle="HTMLALT_RESOURCES" altKey="hidden.distributedTestCode" property="distributedTestCode" value="<%= testCode.toString() %>"/>
-	<html:hidden bundle="HTMLALT_RESOURCES" altKey="hidden.testInformation" property="testInformation" name="distributedTest" property="testInformation"/>
+	<html:hidden bundle="HTMLALT_RESOURCES" altKey="hidden.testInformation" name="distributedTest" property="testInformation"/>
 	<bean:define id="testType" name="distributedTest" property="testType.type"/>
 	<html:hidden bundle="HTMLALT_RESOURCES" altKey="hidden.testType" property="testType" value="<%=testType.toString()%>"/>
 	<bean:define id="availableCorrection" name="distributedTest" property="correctionAvailability.availability"/>
 	<html:hidden bundle="HTMLALT_RESOURCES" altKey="hidden.availableCorrection" property="availableCorrection" value="<%=availableCorrection.toString()%>"/>
-	<html:hidden bundle="HTMLALT_RESOURCES" altKey="hidden.imsFeedback" property="imsFeedback" name="distributedTest" property="imsFeedback"/>
+	<html:hidden bundle="HTMLALT_RESOURCES" altKey="hidden.imsFeedback" name="distributedTest" property="imsFeedback"/>
 	
 		<h2><bean:write name="distributedTest" property="title"/></h2>
 		<b><bean:write name="distributedTest" property="testInformation"/></b>
